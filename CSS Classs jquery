@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> CSS Classs</title>
+    <style>
+        .myclass{
+        background-color:green;
+        color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myclass">Add Remove CSS Class</h1>
+
+    <input  type="button" value="click me" id="btn"/>
+
+    <script src="JQuery/JQuery.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('h1').addClass('myclass');
+            });
+        });
+    </script>
+</body>
+</html>
