@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data Library</title>
+    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css " rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <table id="student">
+        <thead>
+            <tr>
+                <th>Rool no </th>
+                <th>name </th>
+                <th>gender </th>
+                <th>city </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>visha</td>
+                <td>male</td>
+                <td>ytl</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>vrushabh</td>
+                <td>male</td>
+                <td>satara</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>divya</td>
+                <td>female</td>
+                <td>mumbai</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="JQuery/JQuery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        //$(function () {
+        //    $('#student').DataTable();
+        //})
+        $(function () {
+            $('#student').DataTable({
+                searching: false,
+                paging: false
+               
+            })
+        })
+    </script>
+</body>
+</html>
