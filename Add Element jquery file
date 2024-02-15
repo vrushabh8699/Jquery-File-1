@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add Element</title>
+</head>
+<body>
+    <input type="button" value="click me " id="btn" />
+    <div>
+        <p id="p1"><b>Original Paragraph Text</b></p>
+    </div>
+   <table id="tbl">
+       <tr>
+           <td>
+               <input type="text" />
+           </td>
+           <td>
+               <input type="text" />
+           </td>
+           <td>
+               <input type="button" value="+" />
+           </td>
+       </tr>
+   </table>
+
+
+    <script src="JQuery/JQuery.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('#p1').append('Appended text');
+                $('#p1').prepend('prepend text');
+                $('#p1').after('after text');
+                $('#p1').before('before text');
+            });
+
+            // add row multiple
+            //$('[value="+"]').click(function () {
+            //    var row = ` <tr><td><input type="text" /></td>
+            //                <td><input type="text" /></td>
+            //                <td><input type="button" value="+"/></td></tr>`;
+            //    $('#tbl').append(row);
+            //})
+            var counter = 1;
+            var maximumpass = 4;
+            $('#tbl').on("click", "[value='+']", function () {
+                if (counter <= maximumpass) {
+                    var row = ` <tr><td><input type="text" /></td>
+                           <td><input type="text" /></td>
+                           <td><input type="button" value="+"/></td></tr>`;
+                    counter++;
+                }
+                else {
+                    alert('maximum four passengers');
+                }
+                $('#tbl').append(row);
+            });
+            
+        });
+        // Remove row colums.....
+        //$('#btn').click(function () {
+        //    $('#tbl').empty();
+        //})
+       
+    </script>
+</body>
+</html>
