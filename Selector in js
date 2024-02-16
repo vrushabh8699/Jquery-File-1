@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selectors In JQuery</title>
+    <script src="JQuery/JQuery.min.js"></script>
+
+
+</head>
+<body>
+    <h1 class="vk">SELECTORS IN JQ</h1>
+    <h2>FRONT END TEHNOLOGIES SESSIONS</h2>
+    <input type="button" value="click me !!" id="btn"/>
+    <p> 1 st paragrap</p>
+    <div>
+        <p class="vk"> 2 nd paragrap</p>
+        <p class="vk"> 3 rd paragrap</p>
+
+        <ul>
+            <li>coffee</li>
+            <li>tea</li>
+            <li>milk</li>
+        </ul>
+        <ul>
+            <li>samosa</li>
+            <li>wada</li>
+            <li>milk</li>
+        </ul>
+
+
+        <table border="1">
+            <tr>
+                <td>102</td>
+                <td>vishal</td>
+                <td>pune</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>sushil</td>
+                <td>pune</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>vrushabh</td>
+                <td>mumbai</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>varsha</td>
+                <td>satara</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <script>
+        $(function () {
+                 //$('p').css('background', 'red');
+                
+            $("#btn").click(function () {
+                //$('p').css('background', 'red');
+                //$('.vk').css('background', 'red');
+                //$('p.vk').css('background', 'red');
+                //$('div p').css('background', 'red');
+                //$('p:first').css('background', 'red');
+                //$('#btn').css('background', 'red');
+                //$(this).css('background','red')
+                //$('*').css('color','red')
+                //$('tr:even').css('background','red')
+                //$('tr:odd').css('background','green')
+                //$('li').css('color','red')
+                $('li:first-child').css('background', 'red');
+            });
+        });
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
