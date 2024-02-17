@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jquery ui</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        #div{
+            border:2px solid black;
+            height:250px;
+            width:400px;
+        }
+        #popup{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h3>move image any where on page</h3>
+
+    <img src="img/vru.jpg.jpg" width="100" height="100" id="img" />
+
+    <div id="div"></div>
+    <hr />
+    <div id="popup">
+        <h3>popup div heading</h3>
+        <p>this is content div as a model popup</p>
+        
+    </div>
+    <button id="click">click mi</button>
+    <table>
+        <tr>
+            <td>date of birth</td>
+            <td>
+                <input type="text" id="datepicker" />
+                
+            </td>
+        </tr>
+    </table>
+    
+
+    <script src="JQuery/JQuery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $('#img').draggable();
+        })
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '1980: 2024'
+            });
+            $('img').click(function() {
+                $('#popup').dialog();
+            })
+           
+        });
+       
+        //$(function () {
+        //    $("#datepicker").datepicker();
+        //    $("#anim").on("change", function () {
+        //        $("#datepicker").datepicker("option", "bounceAnim", $(this).val());
+        //    });
+        //});
+    </script>
+</body>
+</html>
